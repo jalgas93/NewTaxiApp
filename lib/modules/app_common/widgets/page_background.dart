@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PageBackground extends StatelessWidget {
-  final Widget? child;
+  final Widget child;
 
   const PageBackground({
-    Key? key,
+    Key key,
     this.child,
   }) : super(key: key);
 

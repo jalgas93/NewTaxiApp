@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:taxi/helpers/app_colors.dart';
 
 class BlockContainer extends StatelessWidget {
-  final Widget? child;
+  final Widget child;
   final double width;
-  final double? height;
+  final double height;
 
   final bool hasMargin;
 
   final EdgeInsets margin;
-  final BoxConstraints? constraints;
+  final BoxConstraints constraints;
   final BoxDecoration decoration;
   final bool withClipRect;
-  final EdgeInsets? padding;
+  final EdgeInsets padding;
 
   const BlockContainer({
-    Key? key,
+    Key key,
     this.width = double.infinity,
     this.child,
     this.height,
