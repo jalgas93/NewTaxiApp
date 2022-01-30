@@ -6,4 +6,10 @@ import 'package:taxi/modules/taxi/view/taxi_page.dart';
   AutoRoute(initial: true, page: DashboardPage),
   AutoRoute(page: TaxiPage),
 ])
-class $AppRouter {}
+
+
+
+class $AppRouter {
+
+
+}
