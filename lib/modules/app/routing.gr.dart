@@ -1,41 +1,47 @@
-// **************************************************************************
-// AutoRouteGenerator
-// **************************************************************************
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
 // AutoRouteGenerator
 // **************************************************************************
-//
-// ignore_for_file: type=lint
 
-import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:flutter/material.dart' as _i3;
+// ignore_for_file: public_member_api_docs
 
-import '../taxi/view/taxi_page.dart' as _i1;
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
-class AppRouter extends _i2.RootStackRouter {
-  AppRouter([_i3.GlobalKey<_i3.NavigatorState> navigatorKey])
-      : super(navigatorKey);
+import '../taxi/view/dashboard_page.dart';
+import '../taxi/view/taxi_page.dart';
 
-  @override
-  final Map<String, _i2.PageFactory> pagesMap = {
-    TaxiPageRoute.name: (routeData) {
-      return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.TaxiPage());
-    }
+class Routes {
+  static const String dashboardPage = '/';
+  static const String taxiPage = '/taxi-page';
+  static const all = <String>{
+    dashboardPage,
+    taxiPage,
   };
-
-  @override
-  List<_i2.RouteConfig> get routes =>
-      [_i2.RouteConfig(TaxiPageRoute.name, path: '/')];
 }
 
-/// generated route for
-/// [_i1.TaxiPage]
-class TaxiPageRoute extends _i2.PageRouteInfo<void> {
-  const TaxiPageRoute() : super(TaxiPageRoute.name, path: '/');
-
-  static const String name = 'TaxiPageRoute';
+class AppRouter extends RouterBase {
+  @override
+  List<RouteDef> get routes => _routes;
+  final _routes = <RouteDef>[
+    RouteDef(Routes.dashboardPage, page: DashboardPage),
+    RouteDef(Routes.taxiPage, page: TaxiPage),
+  ];
+  @override
+  Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
+  final _pagesMap = <Type, AutoRouteFactory>{
+    DashboardPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const DashboardPage(),
+        settings: data,
+      );
+    },
+    TaxiPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const TaxiPage(),
+        settings: data,
+      );
+    },
+  };
 }
