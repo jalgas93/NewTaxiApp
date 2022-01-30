@@ -1,6 +1,6 @@
 class Config {
   static const String apiBaseUrl = "";
-  static const String apiBaseUrl1 = "";
+  static const String apiBaseUrlDirections = "https://maps.googleapis.com/maps/api/directions/json?";
   static const String apiBaseUrl2 = "";
   static const String apiBaseUrl3 = "";
   static const String apiBaseUrl4 = "";

@@ -65,20 +65,11 @@ class _ListScreenState extends State<ListScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: 6.0,
-                  ),
-                  Text(
-                    'Hi there',
-                    style: TextStyle(fontSize: 12.0),
-                  ),
-                  Text(
-                    'Where to ?',
-                    style: TextStyle(fontSize: 20.0, fontFamily: "Brand-Bold"),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
+
+                Row(
+
+                ),
+
                   GestureDetector(
                     onTap: () async {
 
@@ -105,73 +96,39 @@ class _ListScreenState extends State<ListScreen> {
                             SizedBox(
                               height: 10.0,
                             ),
-                            Text('Search Drop off'),
+                            Text('Заказать Такси'),
                           ],
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 24.0,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.home,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        height: 12.0,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                             ""
-                          ),
-                          SizedBox(
-                            height: 6.0,
-                          ),
-                          Text(
-                            'Your living home address',
-                            style:
-                                TextStyle(fontSize: 12.0, color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 12.0,
-                  ),
-                  SizedBox(
-                    height: 16.0,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.work,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        height: 12.0,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Add Home'),
-                          SizedBox(
-                            height: 6.0,
-                          ),
-                          Text(
-                            'Your office home address',
-                            style:
-                                TextStyle(fontSize: 12.0, color: Colors.grey),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+
+
+                  // Row(
+                  //   children: [
+                  //     Icon(
+                  //       Icons.work,
+                  //       color: Colors.grey,
+                  //     ),
+                  //     SizedBox(
+                  //       height: 12.0,
+                  //     ),
+                  //     Column(
+                  //       crossAxisAlignment: CrossAxisAlignment.start,
+                  //       children: [
+                  //         Text('Add Home'),
+                  //         SizedBox(
+                  //           height: 6.0,
+                  //         ),
+                  //         Text(
+                  //           'Your office home address',
+                  //           style:
+                  //               TextStyle(fontSize: 12.0, color: Colors.grey),
+                  //         )
+                  //       ],
+                  //     )
+                  //   ],
+                  // ),
                 ],
               ),
             ),
