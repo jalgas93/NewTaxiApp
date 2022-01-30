@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:taxi/modules/taxi/view/taxi_page.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool _initialized = false;
+
   final _appRouter = AppRouter();
 
   @override
@@ -27,14 +29,11 @@ class _MyAppState extends State<MyApp> {
     if (!_initialized) {
       return Container();
     }
-    // return MaterialApp.router(
-    //   routerDelegate: _appRouter.delegate(),
-    //   routeInformationParser: _appRouter.defaultRouteParser(),
-    // );
-    return MaterialApp.router(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
+      builder: ExtendedNavigator(
+        router: AppRouter(),
+      ),
       theme: ThemeData(
         primaryColor: AppColors.primary,
         colorScheme:
