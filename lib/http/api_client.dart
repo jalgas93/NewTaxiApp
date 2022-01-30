@@ -1,11 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:taxi/helpers/config.dart';
 
 class ApiClient {
   final Dio client;
 
   ApiClient._({
-    required this.client,
+    @required this.client,
   });
 
   factory ApiClient.instance() {
@@ -19,7 +20,7 @@ class ApiClient {
 
   Future<dynamic> get(
     String url, {
-    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic> queryParameters,
   }) async {
     final response = await client.get(
       url,
@@ -31,7 +32,7 @@ class ApiClient {
   Future<dynamic> post(
     String url, {
     dynamic data = const {},
-    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic> queryParameters,
   }) async {
     final response = await client.post(
       url,
@@ -44,7 +45,7 @@ class ApiClient {
   Future<dynamic> delete(
     String url, {
     dynamic data = const {},
-    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic> queryParameters,
   }) async {
     final response = await client.delete(
       url,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:taxi/modules/taxi/view/taxi_page.dart';
 import 'helpers/app_colors.dart';
+import 'modules/app/routing.dart';
+//Библеотеку коментировал
 import 'modules/app/routing.gr.dart';
 
 void main() {
@@ -9,7 +11,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
