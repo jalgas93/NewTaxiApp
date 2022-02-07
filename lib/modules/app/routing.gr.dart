@@ -11,16 +11,22 @@ import 'package:flutter/material.dart';
 
 import '../taxi/view/dashboard_page.dart';
 import '../taxi/view/map_page.dart';
+import '../taxi/view/select_transport.dart';
 import '../taxi/view/taxi_page.dart';
+import '../taxi/view/transport_page.dart';
 
 class Routes {
   static const String dashboardPage = '/';
   static const String taxiPage = '/taxi-page';
   static const String mapPage = '/map-page';
+  static const String selectTransport = '/select-transport';
+  static const String transportPage = '/transport-page';
   static const all = <String>{
     dashboardPage,
     taxiPage,
     mapPage,
+    selectTransport,
+    transportPage,
   };
 }
 
@@ -31,6 +37,8 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.dashboardPage, page: DashboardPage),
     RouteDef(Routes.taxiPage, page: TaxiPage),
     RouteDef(Routes.mapPage, page: MapPage),
+    RouteDef(Routes.selectTransport, page: SelectTransport),
+    RouteDef(Routes.transportPage, page: TransportPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -50,6 +58,18 @@ class AppRouter extends RouterBase {
     MapPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const MapPage(),
+        settings: data,
+      );
+    },
+    SelectTransport: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const SelectTransport(),
+        settings: data,
+      );
+    },
+    TransportPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const TransportPage(),
         settings: data,
       );
     },

@@ -5,7 +5,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:taxi/http/api_client.dart';
 import 'package:taxi/models/directions_model.dart';
-import 'package:taxi/modules/taxi/taxi_widgets/ListScreen.dart';
+
 
 class MapPage extends StatefulWidget {
   const MapPage({Key key}) : super(key: key);
