@@ -26,6 +26,7 @@ class ApiClient {
     final response = await dio.get(Config.apiBaseUrlDirections, queryParameters: {
       'destination': '${destination.latitude},${destination.longitude}',
       'origin': '${origin.latitude},${origin.longitude}',
+      'mode':'driving',
       'key': Config.mapKey,
     });
     print('Response:$response');

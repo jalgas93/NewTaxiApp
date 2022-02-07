@@ -3,7 +3,7 @@ import 'package:taxi/helpers/app_colors.dart';
 import 'package:taxi/modules/app_common/widgets/block_container.dart';
 import 'package:taxi/modules/app_common/widgets/empty_app_bar.dart';
 import 'package:taxi/modules/app_common/widgets/page_background.dart';
-import 'package:taxi/modules/taxi/view/services_page.dart';
+import 'package:taxi/modules/taxi/view/select_transport.dart';
 import 'package:taxi/modules/taxi/view/taxi_page.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -19,7 +19,7 @@ class _DashboardState extends State<DashboardPage> {
   int selectedPage = 0;
 
   final _pageOptions = [
-    const ServicePage(),
+    const SelectTransport(),
     const TaxiPage(),
     const TaxiPage(),
   ];
